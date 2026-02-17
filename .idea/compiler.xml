@@ -2,7 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for product-catalog-service" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for offer-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -10,14 +16,35 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
         <module name="product-catalog-service" />
+        <module name="offer-service" />
         <module name="product-aggregator-service" />
+        <module name="product-aggregator-service (1)" />
+        <module name="product-catalog-service (1)" />
+        <module name="product-aggregator-service (2)" />
+        <module name="product-catalog-service (2)" />
+        <module name="product-aggregator-service (3)" />
+        <module name="product-catalog-service (3)" />
+        <module name="product-aggregator-service (4)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="elastic-search-service" target="17" />
+      <module name="price-comparator" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="elastic-search-service" options="-parameters" />
+      <module name="offer-service" options="-parameters" />
       <module name="product-aggregator-service" options="-parameters" />
+      <module name="product-aggregator-service (1)" options="-parameters" />
+      <module name="product-aggregator-service (2)" options="-parameters" />
+      <module name="product-aggregator-service (3)" options="-parameters" />
+      <module name="product-aggregator-service (4)" options="-parameters" />
       <module name="product-catalog-service" options="-parameters" />
+      <module name="product-catalog-service (1)" options="-parameters" />
+      <module name="product-catalog-service (2)" options="-parameters" />
+      <module name="product-catalog-service (3)" options="-parameters" />
     </option>
   </component>
 </project>
